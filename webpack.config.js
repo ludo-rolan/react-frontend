@@ -21,11 +21,15 @@ plugins = [
 
 let config = {
     mode: "development",
-	entry: './src/index.js',
+	// entry: './src/index.js',
+    entry: './src/index.tsx',
 	output: {
 		path: path.resolve(__dirname, './public'),
 		filename: './bundle.js'
 	},
+    resolve: {
+      extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    },
     // plugins: [
     //     new MiniCssExtractPlugin({
     //         // Options similar to the same options in webpackOptions.output
@@ -49,11 +53,16 @@ let config = {
     },
 	module: {
 		rules: [
-			{
-				test: /\.js$/i,
-				exclude: /node_modules/,
-				loader: 'babel-loader'
-			},
+			// {
+			// 	test: /\.js$/i,
+			// 	exclude: /node_modules/,
+			// 	loader: 'babel-loader'
+			// },
+            {
+                test: /\.(ts|tsx)?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             // https://webpack.js.org/loaders/postcss-loader/#autoprefixer
 			{
 				test: /\.(sa|sc|c)ss$/,

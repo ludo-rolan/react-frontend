@@ -1,5 +1,5 @@
 {
-  "name": "react-b4-project",
+  "name": "react-recall",
   "version": "1.0.0",
   "description": "quich refresh of react",
   "main": "index.js",
@@ -13,13 +13,15 @@
   "license": "ISC",
   "dependencies": {
     "@parcel/css": "^1.14.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uglify-js": "^3.17.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",
-    "babel-core": "^6.26.3",
+    "babel-core": "^4.7.16",
     "babel-loader": "^9.1.3",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^6.10.0",
@@ -31,6 +33,7 @@
     "sass-loader": "^14.1.1",
     "style-loader": "^3.3.4",
     "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dashboard": "^3.3.8",
