@@ -1,8 +1,16 @@
-/*$midnight-blue: #2c3e50;*/
-$midnight-blue: #024c78;
-$body-font: yellow;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+@import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
+
+$midnight-blue: #2c3e50;
+/* $midnight-blue: #024c78; */
+$body-font: black;
 
 body {
-    background-color: $midnight-blue;
+    /* background-color: $midnight-blue; */
+    background-color: white;
     color: $body-font;
 }

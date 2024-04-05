@@ -1,16 +1,23 @@
-import React from "react";
+import React from 'react';
 import { createRoot } from 'react-dom/client';
+import {
+    RouterProvider,
+} from "react-router-dom";
 import "../assets/stylesheets/styles.scss";
-
-// Clear the existing HTML content
-document.body.innerHTML = '<div id="app"></div>';
+import App from './pages/App';
+// import router from './router';
 
 function getElement(
     id: string
 ): HTMLElement | null {
-    return  document.getElementById(id);
+    return document.getElementById(id);
 }
+
 // Render your React component instead
-const root = createRoot(getElement( "app" )!);
-// const root = createRoot(document.getElementById("app")!);
-root.render(<h1>Hi, world</h1>);
+const root = createRoot(getElement("app")!);
+root.render(
+    <React.StrictMode>
+        {/* <RouterProvider router={router} /> */}
+        <App/>
+    </React.StrictMode>
+);

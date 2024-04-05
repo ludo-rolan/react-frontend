@@ -5,14 +5,28 @@
         "jsx": "react",
         "strict": true,
         "esModuleInterop": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            // "@/tailwind": ["./tailwind.config.ts"]
+            "@/tailwind": [
+                "./node_modules/tailwindcss/*"
+            ]
+        }
     },
     "files": [
-        "src/index.tsx"
+        "src/index.tsx",
+        "node_modules/@types/react-big-calendar/index.d.ts",
+        "node_modules/@types/react-router/index.d.ts",
+        "node_modules/@types/react-router-dom/index.d.ts"
     ],
     "include": [
         "**/*.ts",
-        "**/*.tsx"
+        "**/*.tsx",
+        "src/@types/*.d.ts",
+        "node_modules/@types/react-big-calendar/index.d.ts"
     ],
     "exclude": [
         "node_modules"
